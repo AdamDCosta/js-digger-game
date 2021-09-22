@@ -1,1 +1,1 @@
-# js-digger-game
+# Digger
