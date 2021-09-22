@@ -1,0 +1,8 @@
+@use "../Base/abstracts" as *;
+@use "../Base/mixins" as *;
+
+h1 {
+  font-family: $font-intro;
+  font-size: 4rem;
+  transform: rotate(-30deg);
+}
