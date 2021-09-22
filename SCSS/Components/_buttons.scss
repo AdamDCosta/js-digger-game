@@ -1,0 +1,8 @@
+@use "../Base/abstracts" as *;
+@use "../Base/mixins" as *;
+
+.intro__button {
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 2rem;
+}
