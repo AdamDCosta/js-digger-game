@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 * {
   padding: 0;
@@ -7,6 +9,7 @@
 }
 
 $font-intro: 'Bungee Shade', cursive;
+$font-text: 'Bungee', cursive;
 
 $color-teal: #00A19D;
 $color-white: #FFF8E5;
