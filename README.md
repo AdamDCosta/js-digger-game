@@ -1,8 +1,10 @@
 # DIGGER
 
+A game written in vanilla javascript, styled with SCSS.
+
 ## Aim of the game
 
-Dig down and find the treasure. Watch out for the rocks and the mines! Hit a mine and you have x seconds to find the treasure before it is game over.
+Dig down and find the treasure. Watch out for the rocks and the mines! Hit a mine and you have 5 seconds to find the treasure before it is game over.
 
 ### Elements needed
 
