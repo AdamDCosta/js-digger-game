@@ -8,6 +8,7 @@ const startBtn = document.querySelector(".intro__button")
 const startPage = document.getElementsByClassName("intro")
 
 // Arrow buttons
+const directionBtns = document.querySelector(".game__buttons")
 const upArrow = document.querySelector("game__buttons--up")
 const rightArrow = document.querySelector("game__buttons--right")
 const downArrow = document.querySelector("game__buttons--down")
@@ -32,6 +33,7 @@ const generateGrid = (rows, cols) => {
 const startGame = () => {
   startBtn.addEventListener("click", () => {
     startPage.classList.toggle("hide-intro")
+
     console.log("hello")
     
   })
@@ -53,7 +55,42 @@ let firstGameCell = document.querySelector(".game__area--cell")
 firstGameCell.appendChild(user);
 
 
-let position = {
-  x: 0,
-  y: 0
+// let position = {
+//   x: 0,
+//   y: 0
+// }
+
+let cellPosition = gameCells[i]
+
+// press up -> move to i - 12 on array, unless i + 11 > 143
+
+
+// press right -> move along 1 index (unless at edge of game area) 
+// --> if i + 1 can be divided by 12?
+
+// press down -> move to i + 12 on array, unless i + 11 > 143 
+
+// press left -> move i - 1 on the array, unless i can be divided by 12?
+
+const moveCharacter = () => {
+  directionBtns.addEventListener("click", (event) => {
+    let direction = event.target.value
+    switch(direction) {
+      case "up":
+        gameCells[i- 12];
+        break;
+      case "right":
+        gameCells[i++]
+        break;
+      case "down":
+        gameCells[i + 12];
+        break;
+      case "left":
+        gameCells[i--];
+        break;     
+    }
+
+    // let moveToCell = 
+
+  })
 }
