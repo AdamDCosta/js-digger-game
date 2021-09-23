@@ -78,6 +78,8 @@ header.hide-intro {
 }
 .game__area--cell {
   display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid red;
 }
 
@@ -121,10 +123,5 @@ header.hide-intro {
   height: 30px;
   width: 30px;
   background-color: blue;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  grid-column: 3/4;
-  grid-row: 1/2;
   z-index: 1;
 }

@@ -33,6 +33,7 @@ const startGame = () => {
   startBtn.addEventListener("click", () => {
     startPage.classList.toggle("hide-intro")
     console.log("hello")
+    
   })
 }
 
@@ -41,5 +42,18 @@ generateGrid(12, 12);
 const generatedGrid = document.querySelectorAll(".game__area--cell");
 
 const gameCells = Array.from(generatedGrid)
+console.log(gameCells)
 
-let 
+
+// const newUser = () => {
+// }
+let user = document.createElement("div");
+user.classList.add("character")
+let firstGameCell = document.querySelector(".game__area--cell")
+firstGameCell.appendChild(user);
+
+
+let position = {
+  x: 0,
+  y: 0
+}
