@@ -60,11 +60,15 @@
   background-color: #FFF8E5;
 }
 .game__area {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
   height: 60vh;
   width: 95%;
   border: 1px solid black;
   background-image: url(../../Assets/RockBG.png);
   background-repeat: repeat-x repeat-y;
+  z-index: 0;
 }
 
 .game__buttons {
@@ -101,4 +105,13 @@
   transform: rotate(270deg);
   grid-column: 1/2;
   grid-row: 2/3;
+}
+
+.character {
+  height: 100%;
+  width: 100%;
+  background-color: blue;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  z-index: 1;
 }
