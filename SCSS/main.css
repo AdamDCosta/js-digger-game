@@ -33,6 +33,10 @@
   align-items: center;
 }
 
+header.hide-intro {
+  display: none;
+}
+
 .intro__button {
   padding: 20px 30px;
   border-radius: 10px;
@@ -74,7 +78,7 @@
 }
 .game__area--cell {
   display: flex;
-  border: 1px solid black;
+  border: 1px solid red;
 }
 
 .game__buttons {

@@ -3,9 +3,9 @@
 
 const startBtn = document.querySelector(".intro__button")
 
-const userCharacter = document.querySelector(".character")
+// const userCharacter = document.querySelector(".character")
 
-
+const startPage = document.getElementsByClassName("intro")
 
 // Arrow buttons
 const upArrow = document.querySelector("game__buttons--up")
@@ -19,19 +19,27 @@ const leftArrow = document.querySelector("game__buttons--left")
 
 const gameArea = document.querySelector(".game__area")
 
-const startGame = () => {
-  startBtn.addEventListener("click", (event) => {
 
-  })
-}
-
-const makeGrid = (rows, cols) => {
-  gameArea.style.setProperty('--grid-rows', rows);
-  gameArea.style.setProperty('--grid-cols', cols);
+const generateGrid = (rows, cols) => {
+  gameArea.style.setProperty("grid-template-rows", "repeat(" + rows + ", 1fr)");
+  gameArea.style.setProperty("grid-template-columns", "repeat(" + cols + ", 1fr)");
   for (i = 0; i < (rows * cols); i++) {
     let cell = document.createElement("div");
-    gameArea.appendChild(cell).className = "game__area--cell";
+    gameArea.appendChild(cell).className = "game__area--cell game__area--cell" + i;
   };
 };
 
-makeGrid(4, 4);
+const startGame = () => {
+  startBtn.addEventListener("click", () => {
+    startPage.classList.toggle("hide-intro")
+    console.log("hello")
+  })
+}
+
+generateGrid(12, 12);
+
+const generatedGrid = document.querySelectorAll(".game__area--cell");
+
+const gameCells = Array.from(generatedGrid)
+
+let 
