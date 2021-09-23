@@ -49,25 +49,33 @@ console.log(gameCells)
 
 
 // To move character
-// --> you need arrow button
-// when arrow pressed - character moves in corresponding direction
-// const newUser = () => {
-// }
+
 
 const newPlayer = () => {
   let user = document.createElement("div");
   user.classList.add("character")
-  let firstGameCell = document.querySelector(".game__area--cell")
+  firstGameCell = document.querySelector(".game__area--cell")
   firstGameCell.appendChild(user);
+  
+
 }
 
 newPlayer();
 
 
-// let position = {
-//   x: 0,
-//   y: 0
-// }
+
+// 1. store players position
+const updatePosition = (position) => {
+  position.appendChild(user);
+}
+
+// 2. click on direction
+
+// 3. perform move (if valid - eg not going off board or into an object)
+
+// 4. calculate new position after move
+
+// 5. update position
 
 
 // press up -> move to i - 12 on array, unless i + 11 > 143
@@ -89,8 +97,8 @@ newPlayer();
         //   gameCells[i - 12];
         //   break;
         case "right":
-          let cellPosition = document.querySelector(".game__area--cell" + 1)
-          break;
+          let cellPosition = gameCells[1];
+        //   break;
         // case "down":
         //   gameCells[i + 12];
         //   break;
@@ -98,10 +106,12 @@ newPlayer();
         //   gameCells[i--];
         //   break;     
       }
+      
   
-      // cellPosition.appendChild(user);
+      updatePosition(cellPosition);
         
       
   })
 
   })
+// let cellPosition = document.querySelector(".game__area--cell")
