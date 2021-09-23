@@ -58,17 +58,23 @@
   flex-direction: column;
   align-items: center;
   background-color: #FFF8E5;
+  position: relative;
+}
+.game :root {
+  --grid-cols: 1;
+  --grid-rows: 1;
 }
 .game__area {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
+  grid-template-rows: repeat(var(--grid-cols, 1fr));
+  grid-template-columns: repeat(var(--grid-cols, 1fr));
   height: 60vh;
   width: 95%;
   border: 1px solid black;
-  background-image: url(../../Assets/RockBG.png);
-  background-repeat: repeat-x repeat-y;
-  z-index: 0;
+}
+.game__area--cell {
+  display: flex;
+  border: 1px solid black;
 }
 
 .game__buttons {
@@ -108,9 +114,12 @@
 }
 
 .character {
-  height: 100%;
-  width: 100%;
+  height: 30px;
+  width: 30px;
   background-color: blue;
+  position: absolute;
+  top: 20px;
+  left: 20px;
   grid-column: 3/4;
   grid-row: 1/2;
   z-index: 1;
