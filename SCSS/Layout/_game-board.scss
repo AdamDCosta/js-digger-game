@@ -21,6 +21,7 @@
     display: grid;
     grid-template-rows: repeat(var(--grid-cols, 1fr));
     grid-template-columns: repeat(var(--grid-cols, 1fr));
+    margin-top: 20px;
     height: 60vh;
     width: 95%;
     border: 1px solid black;
