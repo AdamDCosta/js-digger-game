@@ -2,7 +2,7 @@
 @use "../Base/mixins" as *;
 
 
-main {
+.game {
   
   height: 100vh;
   width: 100%;
@@ -10,11 +10,15 @@ main {
   flex-direction: column;
   align-items: center;
 
-  .game {
+  &__area {
     height: 60vh;
     width: 95%;
     border: 1px solid black;
     background-image: url(../../Assets/RockBG.png);
     background-repeat: repeat-x repeat-y;
   }
+
+  
+
+
 }
