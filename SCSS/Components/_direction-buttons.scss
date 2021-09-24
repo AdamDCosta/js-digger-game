@@ -3,14 +3,14 @@
 
 
 
-.game__buttons {
+.directions {
 
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5px;
 
-  button {
+  &__button {
     background-color: $color-red;
     padding: 10px;
     border-radius: 50%;
@@ -20,31 +20,31 @@
     align-items: center;
     justify-content: center;
 
+    &--up {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+  
+    &--right {
+      transform: rotate(90deg);
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+    }
+  
+    &--down {
+      transform: rotate(180deg);
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+  
+    }
+  
+    &--left {
+      transform: rotate(270deg);
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
   }
 
-  &--up {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-  }
-
-  &--right {
-    transform: rotate(90deg);
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-  }
-
-  &--down {
-    transform: rotate(180deg);
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-
-  }
-
-  &--left {
-    transform: rotate(270deg);
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-  }
 
 
 }

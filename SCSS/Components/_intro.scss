@@ -1,8 +1,11 @@
 @use "../Base/abstracts" as *;
 @use "../Base/mixins" as *;
 
-.intro {
 
+
+
+.intro {
+  
   background-color: $color-white;
   
   &__heading {
@@ -12,15 +15,17 @@
     transform: rotate(-30deg);
     
   }
-
-
+  
+  
   &__desc {
     font-family: $font-text;
     color: $color-orange;
     text-align: center;
     line-height: 1.75;
   }
-
   
-
+  
+  
 }
+
+
